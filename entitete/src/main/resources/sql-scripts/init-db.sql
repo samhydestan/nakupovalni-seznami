@@ -1,0 +1,2 @@
+INSERT INTO uporabnik (ime, priimek, uime, email) VALUES ('Petra', 'Kos', 'petrakos', 'petra.kos@hotmail.com');
+INSERT INTO uporabnik (ime, priimek, uime, email) VALUES ('Miha', 'Novak', 'mihanovak', 'miha.novak@gmail.com');

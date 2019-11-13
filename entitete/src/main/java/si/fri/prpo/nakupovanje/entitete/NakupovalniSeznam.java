@@ -16,7 +16,6 @@ import java.util.List;
         @NamedQuery(name="NakupovalniSeznam.getNumofSeznamforUporabnik",
             query="SELECT COUNT(ns) FROM NakupovalniSeznam ns WHERE ns.uporabnik=:uporabnik")
     })
-
 public class NakupovalniSeznam{
   @Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -32,7 +31,14 @@ public class NakupovalniSeznam{
   @JoinColumn(name="uporabnik_id")
   private Uporabnik uporabnik;
 
-  @OneToMany(mappedBy="nakupovalniSeznam")
+  @ManyToMany(cascade={
+      CascadeType.PERSIST,
+      CascadeType.MERGE
+  })
+  @JoinTable(
+      joinColumns=@JoinColumn(name="nakupovalni_seznam_id"),
+      inverseJoinColumns=@JoinColumn(name="artikel_id")
+  )
   private List<Artikel> artikli;
 
   @ManyToMany(cascade={

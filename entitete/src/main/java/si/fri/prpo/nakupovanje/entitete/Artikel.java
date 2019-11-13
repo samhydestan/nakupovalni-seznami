@@ -1,6 +1,7 @@
 package si.fri.prpo.nakupovanje.entitete;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="artikel")
@@ -28,9 +29,8 @@ public class Artikel{
   @Column(name="zaloga")
   private Integer zaloga;
 
-  @ManyToOne
-  @JoinColumn(name="nakupovalni_seznam_id")
-  private NakupovalniSeznam nakupovalniSeznam;
+  @ManyToMany(mappedBy="artikli")
+  private List<NakupovalniSeznam> nakupovalniSeznami;
 
   public Integer getId(){
     return id;
@@ -64,11 +64,11 @@ public class Artikel{
     this.zaloga=zaloga;
   }
 
-  public NakupovalniSeznam getNakupovalniSeznam(){
-    return nakupovalniSeznam;
+  public List<NakupovalniSeznam> getNakupovalniSeznami(){
+    return nakupovalniSeznami;
   }
 
-  public void setNakupovalniSeznam(NakupovalniSeznam nakupovalniSeznam){
-    this.nakupovalniSeznam=nakupovalniSeznam;
+  public void setNakupovalniSeznami(List<NakupovalniSeznam> nakupovalniSeznami){
+    this.nakupovalniSeznami=nakupovalniSeznami;
   }
 }

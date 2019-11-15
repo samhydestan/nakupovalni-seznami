@@ -44,16 +44,15 @@ public class NakupovalniSeznamManagerBean{
   }
 
   public NakupovalniSeznam createNakupovalniSeznam(NakupovalniSeznamCreateDTO nakupovalniSeznamDTO){
-    NakupovalniSeznam ns=null;
     Uporabnik u=uporabnikBean.getUporabnik(nakupovalniSeznamDTO.getuID());
     if(u==null){
       log.info("Uporabnik ne obstaja.");
-      return ns;
+      return null;
     }
     List<NakupovalniSeznam> nakupovalniSeznami=u.getNakupovalniSeznami();
     List<Artikel> artikli=new ArrayList<>();
     List<Kategorija> kategorije=new ArrayList<>();
-    ns=new NakupovalniSeznam();
+    NakupovalniSeznam ns=new NakupovalniSeznam();
     ns.setUporabnik(u);
     ns.setNaziv(nakupovalniSeznamDTO.getNaziv());
     ns.setOpis(nakupovalniSeznamDTO.getOpis());
@@ -104,7 +103,14 @@ public class NakupovalniSeznamManagerBean{
       return ns;
     }
     List<Kategorija> kategorije=ns.getKategorije();
+    List<NakupovalniSeznam> nakupovalniSeznami=k.getNakupovalniSeznami();
+    if(kategorije.contains(k)){
+      log.info("Seznam je že v tej kategoriji.");
+      return ns;
+    }
+    nakupovalniSeznami.add(ns);
     kategorije.add(k);
+    k.setNakupovalniSeznami(nakupovalniSeznami);
     ns.setKategorije(kategorije);
     nakupovalniSeznamBean.updateNakupovalniSeznam(kategorijaAddDTO.getNsID(),ns);
     return ns;

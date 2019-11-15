@@ -4,13 +4,14 @@ import si.fri.prpo.nakupovanje.entitete.Uporabnik;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.persistence.*;
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.UUID;
 import java.util.logging.Logger;
 
-@ApplicationScoped
+@RequestScoped
 public class UporabnikBean {
 
   private Logger log=Logger.getLogger(UporabnikBean.class.getName());
@@ -18,12 +19,13 @@ public class UporabnikBean {
 
   @PostConstruct
   private void init(){
-    log.info(UporabnikBean.class.getSimpleName()+" je bil ustvarjen.");
+    beanID=UUID.randomUUID().toString();
+    log.info(UporabnikBean.class.getSimpleName()+" z UUID "+beanID+" je bil ustvarjen.");
   }
 
   @PreDestroy
   private void destroy(){
-    log.info(UporabnikBean.class.getSimpleName()+" bo sedaj uničen.");
+    log.info(UporabnikBean.class.getSimpleName()+" z UUID "+beanID+" bo sedaj uničen.");
   }
 
   @PersistenceContext(unitName = "nakupovalni-seznami-jpa")

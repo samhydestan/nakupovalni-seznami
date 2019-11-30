@@ -1,6 +1,7 @@
 package si.fri.prpo.nakupovanje.storitve.bean;
 
 import si.fri.prpo.nakupovanje.entitete.Uporabnik;
+import si.fri.prpo.nakupovanje.storitve.anotacije.BeleziKlice;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -40,6 +41,7 @@ public class UporabnikBean {
   }
 
   @Transactional
+  @BeleziKlice
   public Uporabnik addUporabnik(Uporabnik u){
     if(u!=null){
       em.persist(u);
@@ -48,10 +50,11 @@ public class UporabnikBean {
   }
 
   @Transactional
-  public void updateUporabnik(int id,Uporabnik u){
+  public Uporabnik updateUporabnik(int id,Uporabnik u){
     Uporabnik oldu=em.find(Uporabnik.class,id);
     u.setId(oldu.getId());
     em.merge(u);
+    return em.find(Uporabnik.class,id);
   }
 
   @Transactional

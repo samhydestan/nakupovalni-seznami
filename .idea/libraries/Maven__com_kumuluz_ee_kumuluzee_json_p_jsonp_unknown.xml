@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.kumuluz.ee:kumuluzee-json-p-jsonp:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kumuluz/ee/kumuluzee-json-p-jsonp/unknown/kumuluzee-json-p-jsonp-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kumuluz/ee/kumuluzee-json-p-jsonp/unknown/kumuluzee-json-p-jsonp-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kumuluz/ee/kumuluzee-json-p-jsonp/unknown/kumuluzee-json-p-jsonp-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

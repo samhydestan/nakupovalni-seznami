@@ -29,6 +29,7 @@ public class Artikel{
   @Column(name="zaloga")
   private Integer zaloga;
 
+  //@JsonbTransient
   @ManyToMany(mappedBy="artikli")
   private List<NakupovalniSeznam> nakupovalniSeznami;
 

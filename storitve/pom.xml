@@ -24,5 +24,11 @@
             <groupId>si.fri.prpo.nakupovanje</groupId>
             <artifactId>entitete</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>jakarta.persistence</artifactId>
+            <version>2.2.2</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>

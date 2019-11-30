@@ -46,10 +46,11 @@ public class NakupovalniSeznamBean{
   }
 
   @Transactional
-  public void updateNakupovalniSeznam(int id,NakupovalniSeznam ns){
+  public NakupovalniSeznam updateNakupovalniSeznam(int id,NakupovalniSeznam ns){
     NakupovalniSeznam oldns=em.find(NakupovalniSeznam.class,id);
     ns.setId(oldns.getId());
     em.merge(ns);
+    return em.find(NakupovalniSeznam.class,id);
   }
 
   @Transactional

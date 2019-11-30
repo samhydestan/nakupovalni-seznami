@@ -26,6 +26,7 @@ public class Kategorija{
   @Column(name="opis")
   private String opis;
 
+  //@JsonbTransient
   @ManyToMany(mappedBy="kategorije")
   private List<NakupovalniSeznam> nakupovalniSeznami;
 

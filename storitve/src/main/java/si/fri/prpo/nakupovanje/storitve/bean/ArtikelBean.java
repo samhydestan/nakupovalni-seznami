@@ -47,10 +47,11 @@ public class ArtikelBean{
   }
 
   @Transactional
-  public void updateArtikel(int id,Artikel a){
+  public Artikel updateArtikel(int id,Artikel a){
     Artikel olda=em.find(Artikel.class,id);
     a.setId(olda.getId());
     em.merge(a);
+    return em.find(Artikel.class,id);
   }
 
   @Transactional

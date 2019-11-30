@@ -46,10 +46,11 @@ public class KategorijaBean{
   }
 
   @Transactional
-  public void updateKategorija(int id,Kategorija k){
+  public Kategorija updateKategorija(int id,Kategorija k){
     Kategorija oldk=em.find(Kategorija.class,id);
     k.setId(oldk.getId());
     em.merge(k);
+    return em.find(Kategorija.class,id);
   }
 
   @Transactional

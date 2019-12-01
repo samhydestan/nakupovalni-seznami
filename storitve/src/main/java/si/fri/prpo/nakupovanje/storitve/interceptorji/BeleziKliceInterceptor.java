@@ -14,8 +14,9 @@ public class BeleziKliceInterceptor {
     private StevecBean sb;
 
     @AroundInvoke
-    public void dobiSteviloKlicev(){
+    public Object dobiSteviloKlicev(InvocationContext ic) throws Exception{
         sb.povecajCounter();
+        return ic.proceed();
     }
 
 }

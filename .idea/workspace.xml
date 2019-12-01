@@ -2,130 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc1527ed-3dc4-44da-bf50-8551d2685d39" name="Default Changelist" comment="5.nal">
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/272ef927-8822-4112-a75f-b4db887c368a.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/272ef927-8822-4112-a75f-b4db887c368a/storage_v2/_src_/database/nakupovalniseznami.9yUdaQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/272ef927-8822-4112-a75f-b4db887c368a/storage_v2/_src_/database/nakupovalniseznami.9yUdaQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/272ef927-8822-4112-a75f-b4db887c368a/storage_v2/_src_/database/nakupovalniseznami.9yUdaQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/272ef927-8822-4112-a75f-b4db887c368a/storage_v2/_src_/database/nakupovalniseznami.9yUdaQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_cdi_weld_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_common_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_core_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_jpa_common_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_jpa_eclipselink_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_json_b_yasson_unknown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_json_p_jsonp_unknown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_jta_common_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_jta_narayana_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_servlet_jetty_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_ws_rs_jakarta_ws_rs_api_2_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_javax_el_api_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_interceptor_javax_interceptor_api_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_resource_javax_resource_api_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_alpn_alpn_api_1_1_3_v20160715.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_http2_http2_client_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_http2_http2_common_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_http2_http2_hpack_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_http2_http2_http_client_transport_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_http2_http2_server_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_alpn_client_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_alpn_java_client_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_alpn_java_server_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_alpn_server_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_annotations_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_jndi_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_plus_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_jakarta_persistence_2_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_jpql_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_connectors_jersey_jetty_connector_2_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_ext_cdi_jersey_cdi1x_2_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_ext_cdi_jersey_cdi1x_ban_custom_hk2_binding_2_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_classfilewriter_jboss_classfilewriter_1_2_4_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jboss_transaction_spi_7_6_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_narayana_jta_narayana_jta_5_9_4_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_annotation_jboss_annotations_api_1_3_spec_1_0_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_environment_weld_environment_common_3_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_module_weld_jsf_3_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_module_weld_web_3_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_probe_weld_probe_core_3_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_servlet_weld_servlet_core_3_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_weld_api_3_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_weld_core_impl_3_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_weld_spi_3_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_cfdb_5dcefe7c_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_d88a_5dcd350a_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_d95c_5dcd3b0d_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e07f_5dcb0295_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e0a8_5dcb0321_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e101_5dcb05cc_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e1ea_5dcb0e87_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e25e_5dcb1070_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e706_5dcb38e5_0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/NakupovalniSeznamApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/ArtikelVir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/KategorijaVir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/NakupovalniSeznamVir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/UporabnikVir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entitete/entitete.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nakupovalni-seznami.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/anotacije/BeleziKlice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/StevecBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/interceptorji/BeleziKliceInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storitve/storitve.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/si.fri.prpo.nakupovanje.api/JPAServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/servleti/JPAServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entitete/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/entitete/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entitete/src/main/java/si/fri/prpo/nakupovanje/entitete/Artikel.java" beforeDir="false" afterPath="$PROJECT_DIR$/entitete/src/main/java/si/fri/prpo/nakupovanje/entitete/Artikel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entitete/src/main/java/si/fri/prpo/nakupovanje/entitete/Kategorija.java" beforeDir="false" afterPath="$PROJECT_DIR$/entitete/src/main/java/si/fri/prpo/nakupovanje/entitete/Kategorija.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entitete/src/main/java/si/fri/prpo/nakupovanje/entitete/NakupovalniSeznam.java" beforeDir="false" afterPath="$PROJECT_DIR$/entitete/src/main/java/si/fri/prpo/nakupovanje/entitete/NakupovalniSeznam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_json_b_yasson_unknown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_json_p_jsonp_unknown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_cfdb_5dcefe7c_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_d88a_5dcd350a_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_d95c_5dcd3b0d_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e07f_5dcb0295_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e0a8_5dcb0321_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e101_5dcb05cc_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e1ea_5dcb0e87_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e25e_5dcb1070_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e706_5dcb38e5_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entitete/entitete.iml" beforeDir="false" afterPath="$PROJECT_DIR$/entitete/entitete.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/ArtikelBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/ArtikelBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/KategorijaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/KategorijaBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/NakupovalniSeznamBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/NakupovalniSeznamBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/UporabnikBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/UporabnikBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/StevecBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/StevecBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/interceptorji/BeleziKliceInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/interceptorji/BeleziKliceInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storitve/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storitve/storitve.iml" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/storitve.iml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,6 +131,18 @@
       <recent name="C:\Users\Uporabnik\IdeaProjects\nakupovalniseznami\entitete\src\main\resources" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="nakupovalniseznami" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.kumuluz.ee.EeApplication" />
@@ -242,18 +151,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -278,6 +175,7 @@
       <workItem from="1573765165666" duration="703000" />
       <workItem from="1573766621576" duration="539000" />
       <workItem from="1573845206085" duration="1754000" />
+      <workItem from="1575196135768" duration="4055000" />
     </task>
     <task id="LOCAL−00001" summary="Added beans.">
       <created>1573673526846</created>

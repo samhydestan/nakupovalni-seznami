@@ -11,7 +11,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
 @ApplicationScoped
-@Path("nakupovalniSeznam")
+@Path("nakupovalniSeznami")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 
@@ -83,6 +83,7 @@ public class NakupovalniSeznamVir {
     }
 
     @POST
+    @Path("dodajartikel")
     public Response dodajArtikelIntoNakupovalniSeznam(ArtikelAddDTO ns){
 
         return Response
@@ -92,6 +93,7 @@ public class NakupovalniSeznamVir {
     }
 
     @POST
+    @Path("dodajkategorijo")
     public Response dodajKategorijaIntoNakupovalniSeznam(KategorijaAddDTO ns){
 
         return Response

@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc1527ed-3dc4-44da-bf50-8551d2685d39" name="Default Changelist" comment="5.nal">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_json_b_yasson_unknown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kumuluz_ee_kumuluzee_json_p_jsonp_unknown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_cfdb_5dcefe7c_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_d88a_5dcd350a_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_d95c_5dcd3b0d_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e07f_5dcb0295_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e0a8_5dcb0321_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e101_5dcb05cc_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e1ea_5dcb0e87_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e25e_5dcb1070_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectStore/ShadowNoFileLockStore/defaultStore/Recovery/TransactionStatusManager/0_ffff0a004b01_e706_5dcb38e5_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entitete/entitete.iml" beforeDir="false" afterPath="$PROJECT_DIR$/entitete/entitete.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/StevecBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/bean/StevecBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/interceptorji/BeleziKliceInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/java/si/fri/prpo/nakupovanje/storitve/interceptorji/BeleziKliceInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storitve/storitve.iml" beforeDir="false" afterPath="$PROJECT_DIR$/storitve/storitve.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/ArtikelVir.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/ArtikelVir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/KategorijaVir.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/KategorijaVir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/NakupovalniSeznamVir.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/prpo/nakupovanje/api/v1/viri/NakupovalniSeznamVir.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,6 +138,16 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -175,7 +171,7 @@
       <workItem from="1573765165666" duration="703000" />
       <workItem from="1573766621576" duration="539000" />
       <workItem from="1573845206085" duration="1754000" />
-      <workItem from="1575196135768" duration="4055000" />
+      <workItem from="1575196135768" duration="7871000" />
     </task>
     <task id="LOCAL−00001" summary="Added beans.">
       <created>1573673526846</created>

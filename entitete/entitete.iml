@@ -28,7 +28,9 @@
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:2.7.4" level="project" />
     <orderEntry type="library" name="Maven: com.kumuluz.ee:kumuluzee-json-p-jsonp:unknown" level="project" />
     <orderEntry type="library" name="Maven: com.kumuluz.ee:kumuluzee-json-b-yasson:unknown" level="project" />
+    <orderEntry type="library" name="Maven: com.kumuluz.ee:kumuluzee-jax-rs-jersey:unknown" level="project" />
     <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.2.8" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:javax.persistence-api:2.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.json.bind:javax.json.bind-api:1.0" level="project" />
   </component>
 </module>

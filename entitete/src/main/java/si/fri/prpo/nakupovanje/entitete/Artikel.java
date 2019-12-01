@@ -2,6 +2,7 @@ package si.fri.prpo.nakupovanje.entitete;
 
 import javax.persistence.*;
 import java.util.List;
+import javax.json.bind.annotation.JsonbTransient;
 
 @Entity
 @Table(name="artikel")
@@ -29,7 +30,7 @@ public class Artikel{
   @Column(name="zaloga")
   private Integer zaloga;
 
-  //@JsonbTransient
+  @JsonbTransient
   @ManyToMany(mappedBy="artikli")
   private List<NakupovalniSeznam> nakupovalniSeznami;
 

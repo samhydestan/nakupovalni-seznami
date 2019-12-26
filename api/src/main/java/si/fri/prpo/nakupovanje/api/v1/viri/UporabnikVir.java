@@ -1,5 +1,11 @@
 package si.fri.prpo.nakupovanje.api.v1.viri;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.headers.Header;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import si.fri.prpo.nakupovanje.entitete.Uporabnik;
 import si.fri.prpo.nakupovanje.storitve.anotacije.BeleziKlice;
 import si.fri.prpo.nakupovanje.storitve.bean.UporabnikBean;

@@ -1,5 +1,11 @@
 package si.fri.prpo.nakupovanje.api.v1.viri;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.headers.Header;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import si.fri.prpo.nakupovanje.entitete.NakupovalniSeznam;
 import si.fri.prpo.nakupovanje.storitve.bean.NakupovalniSeznamBean;
 import si.fri.prpo.nakupovanje.storitve.bean.NakupovalniSeznamManagerBean;
@@ -68,17 +74,6 @@ public class NakupovalniSeznamVir {
         }
 
     }
-
-    /*
-    @POST
-    public Response dodajNakupovalniSeznam(NakupovalniSeznam ns){
-
-        return Response
-                .status(Response.Status.CREATED)
-                .entity(nsBean.addNakupovalniSeznam(ns))
-                .build();
-    }
-    */
 
     @Operation(description = "Posodobi nakupovalni seznam", summary = "Posodabljanje nakupovalnega seznama",
             tags = "nakupovalni_seznami", responses = {

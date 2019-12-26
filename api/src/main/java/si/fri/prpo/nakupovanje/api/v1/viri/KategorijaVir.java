@@ -1,5 +1,11 @@
 package si.fri.prpo.nakupovanje.api.v1.viri;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.headers.Header;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import si.fri.prpo.nakupovanje.entitete.Kategorija;
 import si.fri.prpo.nakupovanje.storitve.bean.KategorijaBean;
 import com.kumuluz.ee.rest.beans.QueryParameters;
@@ -34,9 +40,9 @@ public class KategorijaVir {
     public Response pridobiKategorije(){
 
         QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
-        Long katcount = kBean.getArtikliCount(query);
+        Long katcount = kBean.getKategorijeCount(query);
         return Response
-                .ok(kBean.getArtikli(query))
+                .ok(kBean.getKategorije(query))
                 .header("X-Total-Count", katcount)
                 .build();
 

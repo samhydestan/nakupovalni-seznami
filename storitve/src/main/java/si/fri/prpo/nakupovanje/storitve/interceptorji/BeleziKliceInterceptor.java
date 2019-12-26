@@ -5,6 +5,7 @@ import si.fri.prpo.nakupovanje.storitve.bean.StevecBean;
 
 import javax.inject.Inject;
 import javax.interceptor.*;
+import java.util.logging.Logger;
 
 @Interceptor
 @BeleziKlice

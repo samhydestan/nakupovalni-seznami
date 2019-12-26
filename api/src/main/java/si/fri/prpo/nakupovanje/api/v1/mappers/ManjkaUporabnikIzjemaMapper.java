@@ -10,7 +10,7 @@ import javax.ws.rs.ext.Provider;
 public class ManjkaUporabnikIzjemaMapper implements ExceptionMapper<ManjkaUporabnikIzjema> {
 
     @Override
-    public Response toResponse(ManjkaUporabnikIzjemaMapper exception) {
+    public Response toResponse(ManjkaUporabnikIzjema exception) {
         return Response
                 .status(Response.Status.BAD_REQUEST)
                 .entity("{\"napaka\":\"" + exception.getMessage() + "\"}")

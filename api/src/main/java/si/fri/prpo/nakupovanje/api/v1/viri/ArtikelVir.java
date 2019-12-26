@@ -1,5 +1,12 @@
 package si.fri.prpo.nakupovanje.api.v1.viri;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.headers.Header;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import si.fri.prpo.nakupovanje.storitve.bean.ArtikelBean;
 import si.fri.prpo.nakupovanje.entitete.Artikel;
 import com.kumuluz.ee.rest.beans.QueryParameters;
@@ -100,7 +107,7 @@ public class ArtikelVir {
             description = "Identifikator artikla za brisanje", required = true)
                                   @PathParam("id") Integer id){
         return Response .status(Response.Status.OK)
-                .entity(artikelZrno.odstraniArtikela(id))
+                .entity(aBean.deleteArtikel(id))
                 .build();
     }
     @DELETE

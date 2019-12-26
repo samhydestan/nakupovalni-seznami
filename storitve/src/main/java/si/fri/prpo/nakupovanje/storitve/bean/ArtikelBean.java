@@ -2,7 +2,8 @@ package si.fri.prpo.nakupovanje.storitve.bean;
 
 import si.fri.prpo.nakupovanje.entitete.Artikel;
 
-
+import com.kumuluz.ee.rest.beans.QueryParameters;
+import com.kumuluz.ee.rest.utils.JPAUtils;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
@@ -33,6 +34,15 @@ public class ArtikelBean{
   public List<Artikel> getArtikli() {
     return (List<Artikel>)em.createNamedQuery("Artikel.getAll").getResultList();
   }
+
+  public List<Artikel> getArtikli(QueryParameters query) {
+    return JPAUtils.queryEntities(em, Artikel.class, query);
+  }
+
+  public Long getArtikliCount(QueryParameters query) {
+    return JPAUtils.queryEntitiesCount(em, Artikel.class, query);
+  }
+
 
   public Artikel getArtikel(int id){
     return em.find(Artikel.class,id);

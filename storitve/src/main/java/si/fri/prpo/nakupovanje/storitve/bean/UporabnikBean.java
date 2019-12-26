@@ -2,7 +2,8 @@ package si.fri.prpo.nakupovanje.storitve.bean;
 
 import si.fri.prpo.nakupovanje.entitete.Uporabnik;
 import si.fri.prpo.nakupovanje.storitve.anotacije.BeleziKlice;
-
+import com.kumuluz.ee.rest.beans.QueryParameters;
+import com.kumuluz.ee.rest.utils.JPAUtils;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.RequestScoped;
@@ -17,6 +18,8 @@ public class UporabnikBean {
 
   private Logger log=Logger.getLogger(UporabnikBean.class.getName());
   private String beanID;
+
+
 
   @PostConstruct
   private void init(){
@@ -39,6 +42,16 @@ public class UporabnikBean {
   public Uporabnik getUporabnik(int id){
     return em.find(Uporabnik.class,id);
   }
+
+  //
+  public List<Uporabnik> getUporabniki(QueryParameters query) {
+    return JPAUtils.queryEntities(em, Uporabnik.class, query);
+  }
+
+  public Long getUporabnikiCount(QueryParameters query) {
+    return JPAUtils.queryEntitiesCount(em, Uporabnik.class, query);
+  }
+
 
   @Transactional
   @BeleziKlice

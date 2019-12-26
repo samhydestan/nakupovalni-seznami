@@ -7,6 +7,7 @@ import si.fri.prpo.nakupovanje.entitete.Uporabnik;
 import si.fri.prpo.nakupovanje.storitve.dto.ArtikelAddDTO;
 import si.fri.prpo.nakupovanje.storitve.dto.KategorijaAddDTO;
 import si.fri.prpo.nakupovanje.storitve.dto.NakupovalniSeznamCreateDTO;
+import si.fri.prpo.nakupovanje.storitve.izjeme.ManjkaUporabnikIzjema;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -46,8 +47,8 @@ public class NakupovalniSeznamManagerBean{
   public NakupovalniSeznam createNakupovalniSeznam(NakupovalniSeznamCreateDTO nakupovalniSeznamDTO){
     Uporabnik u=uporabnikBean.getUporabnik(nakupovalniSeznamDTO.getuID());
     if(u==null){
-      log.info("Uporabnik ne obstaja.");
-      return null;
+      log.severe("Uporabnik ne obstaja.");
+      throw new ManjkaUporabnikIzjema("Uporabnik ne obstaja.");
     }
     List<NakupovalniSeznam> nakupovalniSeznami=u.getNakupovalniSeznami();
     List<Artikel> artikli=new ArrayList<>();

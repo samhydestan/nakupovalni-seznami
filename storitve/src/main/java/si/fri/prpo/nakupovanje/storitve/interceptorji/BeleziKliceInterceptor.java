@@ -9,13 +9,17 @@ import javax.interceptor.*;
 @Interceptor
 @BeleziKlice
 public class BeleziKliceInterceptor {
+    private Logger log = Logger.getLogger(BeleziKliceInterceptor.class.getName());
+
 
     @Inject
     private StevecBean sb;
 
     @AroundInvoke
     public Object dobiSteviloKlicev(InvocationContext ic) throws Exception{
-        sb.povecajCounter();
+        int st = sb.povecajCounter();
+        log.info("St klicev: " + st);
+
         return ic.proceed();
     }
 

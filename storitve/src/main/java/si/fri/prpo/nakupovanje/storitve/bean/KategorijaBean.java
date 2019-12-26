@@ -1,7 +1,8 @@
 package si.fri.prpo.nakupovanje.storitve.bean;
 
 import si.fri.prpo.nakupovanje.entitete.Kategorija;
-
+import com.kumuluz.ee.rest.beans.QueryParameters;
+import com.kumuluz.ee.rest.utils.JPAUtils;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
@@ -32,6 +33,15 @@ public class KategorijaBean{
   public List<Kategorija> getKategorije() {
     return (List<Kategorija>)em.createNamedQuery("Kategorija.getAll").getResultList();
   }
+
+  public List<Kategorija> getKategorije(QueryParameters query) {
+    return JPAUtils.queryEntities(em, Kategorija.class, query);
+  }
+  public Long getKategorijeCount(QueryParameters query) {
+    return JPAUtils.queryEntitiesCount(em, Kategorija.class, query);
+  }
+
+
 
   public Kategorija getKategorija(int id){
     return em.find(Kategorija.class,id);

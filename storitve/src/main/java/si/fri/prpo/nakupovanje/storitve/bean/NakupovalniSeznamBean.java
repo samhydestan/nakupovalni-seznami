@@ -1,7 +1,8 @@
 package si.fri.prpo.nakupovanje.storitve.bean;
 
 import si.fri.prpo.nakupovanje.entitete.NakupovalniSeznam;
-
+import com.kumuluz.ee.rest.beans.QueryParameters;
+import com.kumuluz.ee.rest.utils.JPAUtils;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
@@ -32,6 +33,15 @@ public class NakupovalniSeznamBean{
   public List<NakupovalniSeznam> getNakupovalniSeznami() {
     return (List<NakupovalniSeznam>)em.createNamedQuery("NakupovalniSeznam.getAll").getResultList();
   }
+
+  public List<NakupovalniSeznam> getNakupovalniSeznami(QueryParameters query) {
+    return JPAUtils.queryEntities(em, NakupovalniSeznam.class, query);
+  }
+
+  public Long getNakupovalniSeznamiCount(QueryParameters query) {
+    return JPAUtils.queryEntitiesCount(em, NakupovalniSeznam.class, query);
+  }
+
 
   public NakupovalniSeznam getNakupovalniSeznam(int id){
     return em.find(NakupovalniSeznam.class,id);

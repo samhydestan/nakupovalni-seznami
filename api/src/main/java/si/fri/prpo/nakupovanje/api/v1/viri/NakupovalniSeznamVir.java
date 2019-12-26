@@ -4,11 +4,14 @@ import si.fri.prpo.nakupovanje.entitete.NakupovalniSeznam;
 import si.fri.prpo.nakupovanje.storitve.bean.NakupovalniSeznamBean;
 import si.fri.prpo.nakupovanje.storitve.bean.NakupovalniSeznamManagerBean;
 import si.fri.prpo.nakupovanje.storitve.dto.*;
+import com.kumuluz.ee.rest.beans.QueryParameters;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
+import javax.ws.rs.core.Context;
+
 
 @ApplicationScoped
 @Path("nakupovalniSeznami")
@@ -17,17 +20,41 @@ import javax.ws.rs.core.*;
 
 public class NakupovalniSeznamVir {
 
+    @Context
+    protected UriInfo uriInfo;
+
     @Inject
     private NakupovalniSeznamBean nsBean;
 
     @Inject
     private NakupovalniSeznamManagerBean nsmBean;
 
+
+    @Operation(description = "Vrne seznam nakupovalnih seznamov", summary = "Seznam nakupovalnih seznamov",
+            tags = "nakupovalni_seznami", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Seznam nakupovalnih seznamov",
+                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = NakupovalniSeznam.class))),
+                    headers = {@Header(name = "X-Total-Count", description = "Št. vrnjenih nakupovalnih seznamov")})
+    })
     @GET
     public Response pridobiNakupovalniSeznam(){
-        return Response.ok(nsBean.getNakupovalniSeznami()).build();
+        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
+        Long uporabnikiCount = nsBean.getNakupovalniSeznamiCount(query);
+        return Response
+                .ok(nsBean.getNakupovalniSeznami(query))
+                .header("X-Total-Count", uporabnikiCount)
+                .build();
+
     }
 
+    @Operation(description = "Vrne podrobnosti nakupovalnega seznama", summary = "Podrobnosti nakupovalnega seznama",
+            tags = "nakupovalni_seznami", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Podrobnosti nakupovalnega seznama",
+                    content = @Content(schema = @Schema(implementation = NakupovalniSeznam.class))
+            )
+    })
     @GET
     @Path("{id}")
     public Response pridobiNakupovalniSeznam(@PathParam("id") Integer id) {
@@ -53,6 +80,11 @@ public class NakupovalniSeznamVir {
     }
     */
 
+    @Operation(description = "Posodobi nakupovalni seznam", summary = "Posodabljanje nakupovalnega seznama",
+            tags = "nakupovalni_seznami", responses = {
+            @ApiResponse(responseCode = "201", description = "Nakupovalni seznam uspešno posodobljen"
+            )
+    })
     @PUT
     @Path("{id}")
     public Response posodobiNakupovalniSeznam(@PathParam("id") Integer id, NakupovalniSeznam ns) {
@@ -63,6 +95,13 @@ public class NakupovalniSeznamVir {
     }
 
 
+    @Operation(description = "Odstrani nakupovalni seznam", summary = "Brisanje nakupovalnega seznama",
+            tags = "nakupovalni_seznami",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Nakupovalni seznam uspešno odstranjen"),
+                    @ApiResponse(responseCode = "404", description = "Nakupovalni seznam ne obstaja")
+
+    })
     @DELETE
     @Path("{id}")
     public Response odstraniNakupovalniSeznam(@PathParam("id") Integer id) {
@@ -72,7 +111,15 @@ public class NakupovalniSeznamVir {
                 .build();
     }
 
+
     //poslovne metode
+    @Operation(description = "Dodaj nakupovalni seznam", summary = "Dodajanje nakupovalnega seznama",
+            tags = "nakupovalni_seznami", responses = {
+            @ApiResponse(responseCode = "201",
+                    description = "Nakupovalni seznam uspešno dodan"
+            ),
+            @ApiResponse(responseCode = "405", description = "Validacijska napaka")
+    })
     @POST
     public Response dodajNakupovalniSeznam(NakupovalniSeznamCreateDTO ns){
 
@@ -81,6 +128,7 @@ public class NakupovalniSeznamVir {
                 .entity(nsmBean.createNakupovalniSeznam(ns))
                 .build();
     }
+
 
     @POST
     @Path("dodajartikel")

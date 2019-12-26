@@ -24,6 +24,11 @@
             <groupId>si.fri.prpo.nakupovanje</groupId>
             <artifactId>storitve</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.openapi</groupId>
+            <artifactId>kumuluzee-openapi</artifactId>
+            <version>1.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>

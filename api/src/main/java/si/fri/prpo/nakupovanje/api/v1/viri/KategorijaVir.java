@@ -2,7 +2,9 @@ package si.fri.prpo.nakupovanje.api.v1.viri;
 
 import si.fri.prpo.nakupovanje.entitete.Kategorija;
 import si.fri.prpo.nakupovanje.storitve.bean.KategorijaBean;
+import com.kumuluz.ee.rest.beans.QueryParameters;
 
+import javax.ws.rs.core.Context;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -15,14 +17,38 @@ import javax.ws.rs.core.*;
 
 public class KategorijaVir {
 
+    @Context
+    protected UriInfo uriInfo;
+
     @Inject
     private KategorijaBean kBean;
 
+    @Operation(description = "Vrne seznam kategorij", summary = "Seznam kategorij",
+            tags = "kategorije", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Seznam kategorij",
+                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = Kategorija.class))),
+                    headers = {@Header(name = "X-Total-Count", description = "Število vrnjenih kategorij")})
+    })
     @GET
     public Response pridobiKategorije(){
-        return Response.ok(kBean.getKategorije()).build();
+
+        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
+        Long katcount = kBean.getArtikliCount(query);
+        return Response
+                .ok(kBean.getArtikli(query))
+                .header("X-Total-Count", katcount)
+                .build();
+
     }
 
+    @Operation(description = "Vrne podrobnosti kategorije", summary = "Podrobnosti kategorije",
+            tags = "kategorije", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Podrobnosti kategorije",
+                    content = @Content(schema = @Schema(implementation = Kategorija.class))
+            )
+    })
     @GET
     @Path("{id}")
     public Response pridobiKategorijo(@PathParam("id") Integer id) {
@@ -37,6 +63,13 @@ public class KategorijaVir {
 
     }
 
+    @Operation(description = "Dodaj kategorijo", summary = "Dodajanje kategorije",
+            tags = "kategorije", responses = {
+            @ApiResponse(responseCode = "201",
+                    description = "Kategorija uspešno dodan"
+            ),
+            @ApiResponse(responseCode = "405", description = "Validacijska napaka")
+    })
     @POST
     public Response dodajKategorijo(Kategorija k){
 
@@ -46,6 +79,11 @@ public class KategorijaVir {
                 .build();
     }
 
+    @Operation(description = "Posodobi kategorijo", summary = "Posodabljanje kategorije",
+            tags = "kategorije", responses = {
+            @ApiResponse(responseCode = "201", description = "Kategorija uspešno posodobljen"
+            )
+    })
     @PUT
     @Path("{id}")
     public Response posodobiKategorijo(@PathParam("id") Integer id, Kategorija k) {
@@ -55,7 +93,13 @@ public class KategorijaVir {
                 .build();
     }
 
+    @Operation(description = "Odstrani kategorijo", summary = "Brisanje kategorije",
+            tags = "kategorija",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Kategorija uspešno odstranjen"),
+                    @ApiResponse(responseCode = "404", description = "Kategorija ne obstaja")
 
+    })
     @DELETE
     @Path("{id}")
     public Response odstraniKategorijo(@PathParam("id") Integer id) {

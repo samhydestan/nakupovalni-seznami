@@ -7,15 +7,22 @@ import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import org.jboss.weld.executor.ProfilingExecutorServices;
 import si.fri.prpo.nakupovanje.storitve.bean.ArtikelBean;
 import si.fri.prpo.nakupovanje.entitete.Artikel;
 import com.kumuluz.ee.rest.beans.QueryParameters;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.*;
 import javax.ws.rs.core.Context;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
 
 @ApplicationScoped
 @Path("artikli")
@@ -24,12 +31,41 @@ import javax.ws.rs.core.Context;
 
 public class ArtikelVir {
 
+    private Client httpClient;
+    private String baseUrl;
+    private Logger log;
+
     @Context
     protected UriInfo uriInfo;
 
     @Inject
     private ArtikelBean aBean;
 
+    @PostConstruct
+    public void init(){
+        httpClient = ClientBuilder.newClient();
+        baseUrl = "http://localhost:8081/v1";
+        log=Logger.getLogger(ArtikelVir.class.getName());
+    }
+
+    @Operation(description = "Vrne seznam priporočenih artiklov", summary = "Seznam priporočenih artiklov",
+        tags = "artikli", responses = {
+        @ApiResponse(responseCode = "200",
+            description = "Seznam priporočenih artiklov",
+            content = @Content(array = @ArraySchema(schema = @Schema(implementation = Artikel.class))),
+            headers = {@Header(name = "X-Total-Count", description = "Število vrnjenih artiklov")})
+    })
+    @GET
+    @Path("predloge")
+    public Response pridobiPredloge(){
+        Integer[] response=httpClient.target(baseUrl+"/predloge").request().get(Integer[].class);
+        List<Artikel> artikli=new ArrayList<>();
+        for(int i=0;i<response.length;i++){
+            artikli.add(aBean.getArtikel(response[i]));
+        }
+        int count=response.length;
+        return Response.ok(artikli).header("X-Total-Count", count).build();
+    }
 
     @Operation(description = "Vrne seznam artiklov", summary = "Seznam artiklov",
             tags = "artikli", responses = {

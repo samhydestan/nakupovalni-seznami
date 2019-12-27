@@ -13,6 +13,10 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -21,6 +25,8 @@ import java.util.logging.Logger;
 public class NakupovalniSeznamManagerBean{
   private Logger log=Logger.getLogger(NakupovalniSeznamManagerBean.class.getName());
   private String beanID;
+  private Client httpClient;
+  private String baseUrl;
 
   @Inject
   private ArtikelBean artikelBean;
@@ -34,8 +40,12 @@ public class NakupovalniSeznamManagerBean{
   @Inject
   private NakupovalniSeznamBean nakupovalniSeznamBean;
 
+
+
   @PostConstruct
   private void init(){
+    httpClient = ClientBuilder.newClient();
+    baseUrl = "http://localhost:8081/v1";
     log.info(NakupovalniSeznamManagerBean.class.getSimpleName()+" je bil ustvarjen.");
   }
 
@@ -89,6 +99,7 @@ public class NakupovalniSeznamManagerBean{
     ns.setArtikli(artikli);
     nakupovalniSeznamBean.updateNakupovalniSeznam(artikelAddDTO.getNsID(),ns);
     artikelBean.updateArtikel(artikelAddDTO.getaID(),a);
+    httpClient.target(baseUrl+"/predloge/"+artikelAddDTO.getaID()).request().put(Entity.entity("",MediaType.APPLICATION_JSON_TYPE));
     return ns;
   }
 

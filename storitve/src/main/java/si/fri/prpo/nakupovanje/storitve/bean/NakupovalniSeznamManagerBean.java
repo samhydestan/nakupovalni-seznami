@@ -1,5 +1,6 @@
 package si.fri.prpo.nakupovanje.storitve.bean;
 
+import com.kumuluz.ee.configuration.utils.ConfigurationUtil;
 import si.fri.prpo.nakupovanje.entitete.Artikel;
 import si.fri.prpo.nakupovanje.entitete.Kategorija;
 import si.fri.prpo.nakupovanje.entitete.NakupovalniSeznam;
@@ -27,6 +28,7 @@ public class NakupovalniSeznamManagerBean{
   private String beanID;
   private Client httpClient;
   private String baseUrl;
+  private ConfigurationUtil conf=ConfigurationUtil.getInstance();
 
   @Inject
   private ArtikelBean artikelBean;
@@ -40,13 +42,12 @@ public class NakupovalniSeznamManagerBean{
   @Inject
   private NakupovalniSeznamBean nakupovalniSeznamBean;
 
-
-
   @PostConstruct
   private void init(){
     httpClient = ClientBuilder.newClient();
-    baseUrl = "http://localhost:8081/v1";
+    baseUrl = conf.get("predlogeapiurl").get();
     log.info(NakupovalniSeznamManagerBean.class.getSimpleName()+" je bil ustvarjen.");
+    log.info("baseurl: "+baseUrl);
   }
 
   @PreDestroy

@@ -1,5 +1,6 @@
 package si.fri.prpo.nakupovanje.api.v1.viri;
 
+import com.kumuluz.ee.configuration.utils.ConfigurationUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.headers.Header;
@@ -33,7 +34,8 @@ public class ArtikelVir {
 
     private Client httpClient;
     private String baseUrl;
-    private Logger log;
+    private ConfigurationUtil conf=ConfigurationUtil.getInstance();
+    private Logger log=Logger.getLogger(ArtikelVir.class.getName());
 
     @Context
     protected UriInfo uriInfo;
@@ -44,8 +46,8 @@ public class ArtikelVir {
     @PostConstruct
     public void init(){
         httpClient = ClientBuilder.newClient();
-        baseUrl = "http://localhost:8081/v1";
-        log=Logger.getLogger(ArtikelVir.class.getName());
+        baseUrl = conf.get("predlogeapiurl").get();
+        log.info("baseurl: "+baseUrl);
     }
 
     @Operation(description = "Vrne seznam priporočenih artiklov", summary = "Seznam priporočenih artiklov",

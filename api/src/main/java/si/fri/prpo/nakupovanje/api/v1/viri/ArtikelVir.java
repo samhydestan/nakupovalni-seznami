@@ -8,7 +8,10 @@ import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import org.jboss.weld.executor.ProfilingExecutorServices;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import si.fri.prpo.nakupovanje.storitve.bean.ArtikelBean;
 import si.fri.prpo.nakupovanje.entitete.Artikel;
 import com.kumuluz.ee.rest.beans.QueryParameters;
@@ -22,6 +25,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.*;
 import javax.ws.rs.core.Context;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -34,8 +38,10 @@ public class ArtikelVir {
 
     private Client httpClient;
     private String baseUrl;
+    private String baseUrlcat;
     private ConfigurationUtil conf=ConfigurationUtil.getInstance();
     private Logger log=Logger.getLogger(ArtikelVir.class.getName());
+    private JSONParser jp=new JSONParser();
 
     @Context
     protected UriInfo uriInfo;
@@ -47,7 +53,9 @@ public class ArtikelVir {
     public void init(){
         httpClient = ClientBuilder.newClient();
         baseUrl = conf.get("predlogeapiurl").get();
+        baseUrlcat=conf.get("kategorijeapiurl").get();
         log.info("baseurl: "+baseUrl);
+        log.info("baseurlcat: "+baseUrlcat);
     }
 
     @Operation(description = "Vrne seznam priporočenih artiklov", summary = "Seznam priporočenih artiklov",
@@ -79,7 +87,6 @@ public class ArtikelVir {
     @GET
     public Response pridobiArtikle(){
 
-       // return Response.ok(aBean.getArtikli()).build();
         QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
         Long artCount = aBean.getArtikliCount(query);
         return Response
@@ -118,8 +125,23 @@ public class ArtikelVir {
             @ApiResponse(responseCode = "405", description = "Validacijska napaka")
     })
     @POST
-    public Response dodajArtikel(Artikel a){
-
+    public Response dodajArtikel(Artikel a) throws ParseException{
+        log.info(baseUrlcat);
+        Response res=httpClient.target(baseUrlcat)
+            .queryParam("text",a.getNaziv())
+            .request(MediaType.APPLICATION_JSON_TYPE)
+            .accept(MediaType.APPLICATION_JSON_TYPE)
+            .header("x-rapidapi-host", "twinword-twinword-bundle-v1.p.rapidapi.com")
+            .header("x-rapidapi-key", "0770ff268fmshaceafaef6d368d5p15e5a4jsne89c956312ec")
+            .get();
+        String body=res.readEntity(String.class);
+        JSONObject jo=(JSONObject)jp.parse(body);
+        JSONArray msg=(JSONArray)jo.get("categories");
+        log.info("REZULTAT POIZVEDBE:");
+        Iterator<String> iterator=msg.iterator();
+        while(iterator.hasNext()){
+            log.info(iterator.next());
+        }
         return Response
                 .status(Response.Status.CREATED)
                 .entity(aBean.addArtikel(a))
